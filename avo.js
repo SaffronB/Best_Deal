@@ -20,7 +20,7 @@ exports.avoPrices = function(avoDeals) {
 
 //here I asked questions like can you push an array into an object? How do I map the two arrays together? I know I have to loop through one of them.
 exports.avoMap = function(avoDeals) {
-  //I remember Andre & Steven saying this is not the best way to import a function into another one, but I've forgotten how to do it the way they suggested.
+  //I remember this is not the best way to import a function into another one, but I've forgotten how to do it the way they suggested.
   var avoPrices = exports.avoPrices;
   var pricePerAvo = avoPrices(avoDeals);
 
