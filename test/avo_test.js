@@ -24,7 +24,14 @@ describe("For the bestdeal kata,", function() {
       '3.33': '3 for R10',
       '2.90': '5 for R14.50',
     });
-
-
   });
+
+  it('I should find the cheapest deal', function() {
+      var result = avo.cheapest(['1 for R3', '2 for R7', '3 for R10', '5 for R14.50']);
+      assert.equal(result, '5 for R14.50');
+
+
+
+});
+
 });

@@ -1,7 +1,7 @@
 exports.deals = function(string) {
   var avoDeals = string.split(', ');
   return avoDeals
-}
+};
 
 exports.avoPrices = function (avoDeals) {
 var pricePerAvo = [];
@@ -16,7 +16,7 @@ for (var i=0; i<avoDeals.length; i++) {
 }
 
 return pricePerAvo;
-}
+};
 
 //here I asked questions like can you push an array into an object? How do I map the two arrays together? I know I have to loop through one of them.
 exports.avoMap = function (avoDeals) {
@@ -36,4 +36,18 @@ var price = pricePerAvo [i];
 
 return priceMap;
 
-}
+};
+//I know I should use Math.min and then use the map to return the deal. Battling to remember exactly how to use the map though.
+exports.cheapest = function (avoDeals) {
+
+  var avoMap = exports.avoMap;
+  var priceMap = avoMap(avoDeals);
+  var avoPrices = exports.avoPrices;
+  var PricePerAvo = avoPrices(avoDeals);
+
+var cheapestPrice = Math.min.apply(null, PricePerAvo).toFixed(2);
+return priceMap[cheapestPrice];
+
+//realised that in my return is where I would be writing the actual code for linking the cheapestPrice from pricePerAvo to the priceMap and then that it would then return the corresponding value.
+
+  };
